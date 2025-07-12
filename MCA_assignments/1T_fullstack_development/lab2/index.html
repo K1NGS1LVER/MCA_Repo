@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Explore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="font-sans bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold text-blue-600">TravelExplore</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-blue-500"><i class="fas fa-home mr-1"></i>Home</a>
+                <a href="#places" class="text-gray-700 hover:text-blue-500"><i class="fas fa-map-marker-alt mr-1"></i>Places</a>
+                <a href="#gallery" class="text-gray-700 hover:text-blue-500"><i class="fas fa-images mr-1"></i>Gallery</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-500"><i class="fas fa-envelope mr-1"></i>Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-2xl p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 mt-2 rounded-lg shadow-lg mx-2">
+            <div class="py-2">
+                <a href="#home" class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 border-b border-gray-100">
+                    <i class="fas fa-home mr-3 text-blue-500"></i>Home
+                </a>
+                <a href="#places" class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 border-b border-gray-100">
+                    <i class="fas fa-map-marker-alt mr-3 text-green-500"></i>Places
+                </a>
+                <a href="#gallery" class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 border-b border-gray-100">
+                    <i class="fas fa-images mr-3 text-purple-500"></i>Gallery
+                </a>
+                <a href="#contact" class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                    <i class="fas fa-envelope mr-3 text-orange-500"></i>Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-cover bg-center h-[500px] text-white flex flex-col justify-center items-center text-center px-4" style="background-image: url('https://as1.ftcdn.net/jpg/03/04/88/18/1000_F_304881889_yJ1S3butl9gVs0kMptYTU2N1EVmEJbz8.webp');">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Discover Amazing Destinations</h1>
+        <p class="text-lg md:text-xl mb-6">Plan your next adventure with us</p>
+        <button class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-white transition-colors duration-200">Start Exploring</button>
+    </section>
+
+    <!-- Video Section -->
+    <section id="places" class="p-8">
+        <h2 class="text-2xl font-bold mb-4 text-center">Check Out Our Video</h2>
+        <video controls class="w-full max-w-3xl mx-auto rounded-lg shadow-lg">
+            <source src="SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Audio Section -->
+    <section id="gallery" class="p-8">
+        <h2 class="text-2xl font-bold mb-4 text-center">Listen to Music</h2>
+        <div class="w-full max-w-md mx-auto">
+            <audio controls class="w-full h-12 rounded-lg shadow-md">
+                <source src="The Weeknd SB D 02 - Party Monster.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="mt-4 text-center">
+                <p class="text-sm text-gray-600">The Weeknd - Party Monster</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Section -->
+    <section id="contact" class="p-8">
+        <h2 class="text-2xl font-bold mb-4 text-center">Travel Posts</h2>
+        <div id="api-content" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                <div class="animate-pulse">
+                    <div class="h-4 bg-gray-200 rounded mb-2"></div>
+                    <div class="h-3 bg-gray-200 rounded mb-1"></div>
+                    <div class="h-3 bg-gray-200 rounded"></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                <div class="animate-pulse">
+                    <div class="h-4 bg-gray-200 rounded mb-2"></div>
+                    <div class="h-3 bg-gray-200 rounded mb-1"></div>
+                    <div class="h-3 bg-gray-200 rounded"></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                <div class="animate-pulse">
+                    <div class="h-4 bg-gray-200 rounded mb-2"></div>
+                    <div class="h-3 bg-gray-200 rounded mb-1"></div>
+                    <div class="h-3 bg-gray-200 rounded"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-6 mt-8">
+        <div class="flex justify-center items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current text-blue-400" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
+            </svg>
+            <p>Daniel Paul | Roll No: 2547159</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                } else {
+                    console.log('Target not found:', href);
+                }
+            });
+        });
+
+        // Fetch posts from API
+        fetch('https://jsonplaceholder.typicode.com/posts?_limit=6')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const container = document.getElementById('api-content');
+                container.innerHTML = ''; // Clear loading placeholders
+                
+                data.forEach(post => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-200';
+                    
+                    // Create elements safely to prevent XSS
+                    const title = document.createElement('h3');
+                    title.className = 'text-xl font-bold mb-2 text-gray-800';
+                    title.textContent = post.title;
+                    
+                    const body = document.createElement('p');
+                    body.className = 'text-gray-600 leading-relaxed';
+                    body.textContent = post.body;
+                    
+                    card.appendChild(title);
+                    card.appendChild(body);
+                    container.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                const container = document.getElementById('api-content');
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-8">
+                        <i class="fas fa-exclamation-triangle text-4xl text-red-400 mb-4"></i>
+                        <p class="text-red-500 text-lg">Failed to load content</p>
+                        <p class="text-gray-500 text-sm mt-2">Please try again later</p>
+                    </div>
+                `;
+            });
+    </script>
+</body>
+
+</html>
