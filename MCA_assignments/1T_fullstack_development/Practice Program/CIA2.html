@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Product Search & Sort</title>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <nav
+      class="bg-black text-white h-16 flex items-center justify-between px-6"
+    >
+      <ul class="flex space-x-8">
+        <li class="hover:underline cursor-pointer">Home</li>
+        <li class="hover:underline cursor-pointer">Shopping Cart</li>
+        <li class="hover:underline cursor-pointer">About Us</li>
+      </ul>
+
+      <!-- Search Box -->
+      <input
+        type="text"
+        id="title"
+        placeholder="Search by title..."
+        class="text-black px-4 py-1 rounded w-64"
+      />
+    </nav>
+
+    <!-- Filters -->
+    <div class="flex justify-center gap-4 my-4">
+      <select id="sortTitle" class="px-3 py-1 rounded">
+        <option value="">Sort by Title</option>
+        <option value="az">A - Z</option>
+        <option value="za">Z - A</option>
+      </select>
+
+      <select id="sortPrice" class="px-3 py-1 rounded">
+        <option value="">Sort by Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+      </select>
+    </div>
+
+    <!-- Products Display -->
+    <div id="products" class="flex flex-wrap gap-6 justify-center px-4"></div>
+    <script src="CIA2.js"></script>
+  </body>
+</html>
