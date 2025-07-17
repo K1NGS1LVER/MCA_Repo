@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Shop Explorer</title>
+    <script src="tailwind.css"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="fontawesome.css" />
+    <!-- <script src="font-awesome.min.css"></script> -->
+    <link rel="stylesheet" href="font-awesome.min.css" />
+    <script src="script.js"></script>
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+      <nav
+        class="container mx-auto flex items-center justify-between py-4 px-4"
+      >
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-store text-blue-600 text-2xl"></i>
+          <span class="font-bold text-xl text-gray-800">E-Shop Explorer</span>
+        </div>
+        <ul class="flex space-x-6 text-gray-600">
+          <li>
+            <a href="#" class="hover:text-blue-600"
+              ><i class="fas fa-home"></i> Home</a
+            >
+          </li>
+          <li>
+            <a href="#products" class="hover:text-blue-600"
+              ><i class="fas fa-box"></i> Products</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-blue-600"
+              ><i class="fas fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative flex items-center justify-center h-64 sm:h-80 md:h-96 bg-cover bg-center "
+      style='background-image: url("https://img.freepik.com/free-photo/two-beautiful-women-shopping-town_1303-16431.jpg?semt=ais_hybrid&w=740");'
+    >
+      <div class="bg-black bg-opacity-50 p-6 rounded-lg text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 ">Welcome to E-Shop Explorer</h1>
+        <p class="text-white text-lg">Discover top products and exclusive deals!</p>
+      </div>
+    </section>
+
+    <!-- Media Section -->
+    <main class="container bg-blue-100 mx-auto px-4 py-6 flex flex-col gap-8">
+      <!-- Video -->
+      <div class="flex-1">
+        <h2 class="text-xl font-semibold mb-2">Store Introduction</h2>
+        <video
+          controls
+          class="w-full rounded shadow"
+          poster="https://images.unsplash.com/photo-1515168833906-d2a3b82b302b?auto=format&fit=crop&w=400&q=80"
+        >
+          <source src="Set1 Video.mp4" type="video/mp4" />
+          <track
+            src="sub.vtt"
+            kind="subtitles"
+            srclang="en"
+            label="English"
+            default
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Audio -->
+      <div class="flex-1 flex flex-col justify-center">
+        <h2 class="text-xl font-semibold mb-2">Featured Product Audio</h2>
+        <audio controls class="w-full">
+          <source src="Set1 Audio.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </main>
+    <!-- Interest Form -->
+    <section id="contact" class="container mx-auto px-4 py-6">
+      <h2 class="text-2xl font-semibold mb-4">Express Your Interest</h2>
+      <form
+        id="interestForm"
+        class="bg-white rounded-lg shadow p-6 max-w-lg mx-auto flex flex-col gap-4"
+      >
+        <div>
+          <label for="name" class="block text-gray-700 font-medium mb-1"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            placeholder="Your Name"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-gray-700 font-medium mb-1"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            placeholder="you@email.com"
+          />
+        </div>
+        <div>
+          <label for="product" class="block text-gray-700 font-medium mb-1"
+            >Product Interested In</label
+          >
+          <input
+            type="text"
+            id="product"
+            name="product"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            placeholder="Product Name"
+          />
+        </div>
+        <button
+          type="submit"
+          class="bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <!-- Product Display Section -->
+    <section id="products" class="container mx-auto px-4 py-6">
+      <h2 class="text-2xl font-semibold mb-4">Top Products</h2>
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+        <input
+          id="searchBox"
+          type="text"
+          placeholder="Search products..."
+          class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+        />
+        <button
+          id="searchBtn"
+          class="bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transiton"
+        >
+          Search
+        </button>
+        <select
+          id="sortDropdown"
+          class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+        >
+          <option value="">Sort by Price</option>
+          <option value="low">Low to High</option>
+          <option value="high">High to Low</option>
+        </select>
+      </div>
+      <div
+        id="productGrid"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+      ></div>
+    </section>
+    <footer
+      class="width-100 bg-blue-600 text-white flex justify-center items-center p-2"
+    >
+      <p>&copy; Daniel Paul regnum-2547159 </p>
+    </footer>
+  </body>
+</html>
